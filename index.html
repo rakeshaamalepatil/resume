@@ -3,165 +3,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Using a professional-looking font from Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- Load Tailwind CSS for easy styling -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Rakesh Ashok Aamalepatil - Resume</title>
+    <!-- Using a professional-looking font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Rakesh A. Aamalepatil - Resume</title>
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #d1d5db; /* A subtle gray line */
+            z-index: 1;
+        }
+        .timeline-item:last-child::before {
+            height: 50%; /* Adjusts the line length for the last item */
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-100 text-gray-800">
 
-    <!-- Header Section -->
-    <header class="bg-blue-600 text-white py-12 px-4 shadow-lg">
-        <div class="container mx-auto max-w-4xl flex flex-col md:flex-row items-center justify-between">
-            <div class="text-center md:text-left mb-4 md:mb-0">
-                <h1 class="text-3xl md:text-5xl font-bold">Rakesh Ashok Aamalepatil</h1>
-                <p class="text-lg md:text-xl font-light mt-2">Data Analyst in transition</p>
-            </div>
-            <div class="text-sm text-center md:text-right space-y-1">
-                <p>Nashik, Maharashtra</p>
-                <p>+91 81495 11093</p>
-                <a href="mailto:rakesh.aamale.paatil@gmail.com" class="text-white hover:underline">rakesh.aamale.paatil@gmail.com</a>
-                <p>
-                    <a href="https://www.linkedin.com/in/rakeshaamalepatil/" class="text-white hover:underline" target="_blank">LinkedIn</a> |
-                    <a href="https://github.com/rakeshaamalepatil" class="text-white hover:underline" target="_blank">GitHub</a>
-                </p>
+    <!-- Navbar -->
+    <nav class="bg-white sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-4 py-4 md:py-6 flex items-center justify-between">
+            <h1 class="text-2xl md:text-3xl font-bold text-gray-900">Rakesh A. Aamalepatil</h1>
+            <div class="hidden md:flex space-x-6 text-gray-600 font-medium">
+                <a href="#overview" class="hover:text-blue-600 transition-colors duration-200">Overview</a>
+                <a href="#competencies" class="hover:text-blue-600 transition-colors duration-200">Core Competencies</a>
+                <a href="#journey" class="hover:text-blue-600 transition-colors duration-200">Career Journey</a>
+                <a href="#skills" class="hover:text-blue-600 transition-colors duration-200">Skills & Tools</a>
+                <a href="#projects" class="hover:text-blue-600 transition-colors duration-200">Projects</a>
             </div>
         </div>
-    </header>
+    </nav>
 
-    <!-- Main Content Sections -->
-    <main class="container mx-auto max-w-4xl p-4 md:p-8 space-y-8">
-        
-        <!-- Career Summary Section -->
-        <section class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
-            <h2 class="text-2xl font-bold text-blue-600 mb-4">Career Summary</h2>
-            <p class="text-gray-700 leading-relaxed">
-                Data Analyst in transition with 15+ years of experience in performance metrics tracking, business reporting, and data-driven decision-making in the fitness industry. Skilled in Excel, SQL, and Python for data cleaning, analysis, and visualization. Adept at translating raw data into actionable insights to improve KPIs, efficiency, and customer engagement. Currently pursuing a Data Analyst Master Program from Simplilearn to strengthen analytical and visualization expertise.
+    <!-- Overview Section -->
+    <section id="overview" class="bg-white py-16 md:py-24 px-4 text-center">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-4">15+ Years of Client-Centric Excellence</h2>
+            <p class="text-lg md:text-xl text-gray-600">
+                Bridging expert fitness coaching with data-driven analysis to deliver exceptional customer support and engagement.
             </p>
-        </section>
-
-        <!-- Key Achievements Section -->
-        <section class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
-            <h2 class="text-2xl font-bold text-blue-600 mb-4">Key Achievements</h2>
-            <ul class="list-disc list-inside space-y-2 text-gray-700">
-                <li>Successfully turned around the performance of 13 underperforming coaches in the company's Performance Improvement Program within 5 weeks.</li>
-                <li>Improved conversion skills (soft skills + text-based sales), resulting in a retention rate increase to 24% (exceeding the company's 20% benchmark).</li>
-                <li>Boosted Net Promoter Score (NPS) and Net Promoter Unit (NPU) by 45%, reaching 84% overall satisfaction.</li>
-            </ul>
-        </section>
-
-        <!-- Technical Skills Section -->
-        <section class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
-            <h2 class="text-2xl font-bold text-blue-600 mb-4">Technical Skills</h2>
-            <ul class="list-disc list-inside space-y-2 text-gray-700">
-                <li><span class="font-semibold">Data Analysis & Tools:</span> Excel (Pivot Tables, VLOOKUP, Power Query), Google Sheets, SQL (Joins, Aggregations, Filtering), Python (Pandas, NumPy, Matplotlib), Data Cleaning, Data Visualization, Descriptive Statistics</li>
-                <li><span class="font-semibold">BI & Visualization:</span> Excel Dashboards, Data Storytelling, KPI Tracking</li>
-                <li><span class="font-semibold">Other Tools:</span> ChatGPT, Copilot, Prompt Engineering for Automation & Data Queries</li>
-                <li><span class="font-semibold">Core Competencies:</span> Business Analytics, Metrics Optimization, Client Data Insights, Reporting & Performance Tracking</li>
-            </ul>
-        </section>
-
-        <!-- NEW Projects Section -->
-        <section class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
-            <h2 class="text-2xl font-bold text-blue-600 mb-4">Projects</h2>
-            <p class="text-gray-700 leading-relaxed mb-4">
-                Here are a few of my data analysis projects, demonstrating my skills in real-world applications. Click on the links to view the live project pages.
-            </p>
-            <ul class="list-disc list-inside space-y-4 text-gray-700">
-                <li>
-                    <a href="https://rakeshaamalepatil.github.io/Blinkit-Analysis-Project/" class="text-blue-600 hover:text-blue-800 font-semibold transition-colors duration-200" target="_blank">
-                        Blinkit Analysis Project
-                    </a>
-                    <p class="text-sm text-gray-500 mt-1">
-                        A detailed analysis of Blinkit's data to uncover key insights and trends.
+            <div class="flex flex-col md:flex-row justify-center items-center mt-12 space-y-6 md:space-y-0 md:space-x-6">
+                <!-- Competency Card 1 -->
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-200 w-full md:w-1/3">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">Client Relationship Expert</h3>
+                    <p class="text-gray-500 text-sm">
+                        Mastery in building rapport, understanding needs, and guiding clients to success through empathetic and structured support.
                     </p>
-                </li>
-                <li>
-                    <a href="https://rakeshaamalepatil.github.io/Insurance_Data_Analysis_Project/" class="text-blue-600 hover:text-blue-800 font-semibold transition-colors duration-200" target="_blank">
-                        Insurance Data Analysis Project
-                    </a>
-                    <p class="text-sm text-gray-500 mt-1">
-                        Analyzing insurance datasets to identify patterns and inform business decisions.
-                    </p>
-                </li>
-                <li>
-                    <a href="https://rakeshaamalepatil.github.io/sales-dashboard/" class="text-blue-600 hover:text-blue-800 font-semibold transition-colors duration-200" target="_blank">
-                        Sales Dashboard Project
-                    </a>
-                    <p class="text-sm text-gray-500 mt-1">
-                        An interactive dashboard to track and visualize sales performance metrics.
-                    </p>
-                </li>
-            </ul>
-        </section>
-
-        <!-- Professional Experience Section -->
-        <section class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
-            <h2 class="text-2xl font-bold text-blue-600 mb-4">Professional Experience</h2>
-            <div class="space-y-6">
-                <!-- Role 1 -->
-                <div>
-                    <h3 class="text-xl font-semibold">Subject Matter Expert & Fitness Consultant - HealthifyMe India</h3>
-                    <p class="text-gray-500 italic mt-1">Nov 2022 - Aug 2025</p>
-                    <ul class="list-disc list-inside mt-2 space-y-1 text-gray-700">
-                        <li>Conducted performance data analysis for 50+ fitness coaches, improving efficiency by 15% through data-driven coaching plans.</li>
-                        <li>Created Excel-based tracking tools to monitor KPIs, training hours, and client satisfaction scores.</li>
-                        <li>Presented monthly data insights to leadership for operational decision-making.</li>
-                    </ul>
                 </div>
-                <!-- Role 2 -->
-                <div>
-                    <h3 class="text-xl font-semibold">Executive Director & Academy Head - Positive Existence Personal Training India Pvt. Ltd</h3>
-                    <p class="text-gray-500 italic mt-1">Dec 2016-Jan 2021</p>
-                    <ul class="list-disc list-inside mt-2 space-y-1 text-gray-700">
-                        <li>Implemented real-time performance dashboards to track instructor productivity and course completion rates.</li>
-                        <li>Analyzed branch-level financial and operational data to improve profit margins by 12%.</li>
-                        <li>Led data-informed strategy changes that increased membership retention by 20%.</li>
-                    </ul>
+                <!-- Competency Card 2 -->
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-200 w-full md:w-1/3">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">Analytical Problem-Solver</h3>
+                    <p class="text-gray-500 text-sm">
+                        Utilizes a data-informed approach to analyze issues, track performance, and implement effective improvement strategies.
+                    </p>
                 </div>
-                <!-- Role 3 -->
-                <div>
-                    <h3 class="text-xl font-semibold">Operations Manager & Fitness Academy Head - Fiber Fitness Solutions India Pvt. Ltd</h3>
-                    <p class="text-gray-500 italic mt-1">Jun 2014-Aug 2016</p>
-                    <ul class="list-disc list-inside mt-2 space-y-1 text-gray-700">
-                        <li>Designed data-driven training programs based on analysis of client progress reports.</li>
-                        <li>Managed and analyzed participant performance data for Folk Fitness (a fitness-through-folk-dance program) to adjust training intensity and improve participant retention.</li>
-                        <li>Created and implemented Standard Operating Procedures (SOPs) for data tracking, reporting, and program evaluation, ensuring consistent quality across multiple locations.</li>
-                    </ul>
+                <!-- Competency Card 3 -->
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-200 w-full md:w-1/3">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">Adaptable & Tech-Savvy</h3>
+                    <p class="text-gray-500 text-sm">
+                        Actively transitioning into technology, with hands-on skills in modern data tools and a passion for continuous learning.
+                    </p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Education & Certifications Section -->
-        <section class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
-            <h2 class="text-2xl font-bold text-blue-600 mb-4">Education & Certifications</h2>
-            <ul class="list-disc list-inside space-y-2 text-gray-700">
-                <li><span class="font-semibold">Data Analyst Master Program</span> - Simplilearn (In Progress, Expected 2025)</li>
-                <li><span class="font-semibold">Introduction to Data Analytics</span> - Simplilearn, 2025</li>
-                <li><span class="font-semibold">Introduction to MS Excel</span> - Simplilearn, 2025</li>
-                <li><span class="font-semibold">Business Analytics with Excel (Beginner)</span> - Simplilearn, 2025</li>
-            </ul>
-        </section>
+    <!-- Core Competencies Section -->
+    <section id="competencies" class="py-16 md:py-24 px-4">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Core Competencies for Customer Care</h2>
+            <p class="text-gray-600 max-w-3xl mx-auto mb-12">
+                This section demonstrates how my experience directly aligns with the key requirements of a customer care role. Click each competency to see the relevant skills and experience I bring.
+            </p>
+            <div class="bg-white rounded-xl shadow-lg p-6 md:p-10 flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-10">
+                <div class="flex-shrink-0 md:w-1/3 text-left">
+                    <ul class="space-y-4 font-medium text-gray-600 text-lg">
+                        <li class="p-2 rounded-lg text-blue-600 bg-blue-50">Client Engagement & Support</li>
+                        <li class="p-2 rounded-lg hover:bg-gray-100 cursor-pointer transition-colors duration-200">Analytical Problem-Solving</li>
+                        <li class="p-2 rounded-lg hover:bg-gray-100 cursor-pointer transition-colors duration-200">Team Collaboration & Escalation</li>
+                        <li class="p-2 rounded-lg hover:bg-gray-100 cursor-pointer transition-colors duration-200">Process & Documentation</li>
+                    </ul>
+                </div>
+                <div class="flex-1 text-left">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-3">Resolving Questions & Ensuring Support</h3>
+                    <p class="text-gray-500 leading-relaxed">
+                        With over a decade of one-on-one client coaching, I excel at being the first point of contact. My experience involves actively listening to client issues, troubleshooting their challenges with fitness and nutrition plans, and providing clear, actionable solutions to ensure they feel heard and consistently supported on their journey.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!-- Additional Information Section -->
-        <section class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
-            <h2 class="text-2xl font-bold text-blue-600 mb-4">Additional Information</h2>
-            <ul class="list-disc list-inside space-y-2 text-gray-700">
-                <li>Published multiple fitness analytics articles in Times of India (focused on client health trends & program outcomes).</li>
-                <li>Strong leadership, stakeholder management, and business reporting background with a passion for data-driven solutions.</li>
-            </ul>
-        </section>
-    </main>
+    <!-- Career Journey Section -->
+    <section id="journey" class="py-16 md:py-24 px-4 bg-gray-50">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">My Career Journey</h2>
+            <p class="text-gray-600 max-w-3xl mx-auto mb-12">
+                An interactive timeline of my professional growth, from leading fitness teams to specializing in data-driven client success. Click on any role to expand its details.
+            </p>
+            <div class="relative pl-6 md:pl-10 space-y-12">
+                <!-- Timeline Item 1 -->
+                <div class="relative timeline-item text-left">
+                    <div class="absolute -left-3 md:-left-4 top-0 h-4 w-4 rounded-full bg-blue-600 z-20 shadow-md"></div>
+                    <h3 class="text-lg font-semibold text-gray-700">Subject Matter Expert & Fitness Consultant</h3>
+                    <p class="text-sm text-gray-500">HealthifyMe India | Nov 2022 - Aug 2025</p>
+                </div>
+                <!-- Timeline Item 2 -->
+                <div class="relative timeline-item text-left">
+                    <div class="absolute -left-3 md:-left-4 top-0 h-4 w-4 rounded-full bg-blue-600 z-20 shadow-md"></div>
+                    <h3 class="text-lg font-semibold text-gray-700">Executive Director & Academy Head</h3>
+                    <p class="text-sm text-gray-500">Positive Existence Personal Training India Pvt. Ltd | Dec 2016 - Jan 2021</p>
+                </div>
+                <!-- Timeline Item 3 -->
+                <div class="relative timeline-item text-left">
+                    <div class="absolute -left-3 md:-left-4 top-0 h-4 w-4 rounded-full bg-blue-600 z-20 shadow-md"></div>
+                    <h3 class="text-lg font-semibold text-gray-700">Operations Manager & Fitness Academy Head</h3>
+                    <p class="text-sm text-gray-500">Fiber Fitness Solutions India Pvt. Ltd | Jun 2014 - Aug 2016</p>
+                </div>
+                <!-- Timeline Item 4 (Placeholder) -->
+                <div class="relative timeline-item text-left">
+                    <div class="absolute -left-3 md:-left-4 top-0 h-4 w-4 rounded-full bg-blue-600 z-20 shadow-md"></div>
+                    <h3 class="text-lg font-semibold text-gray-700">Fitness Consultant & Personal Trainer</h3>
+                    <p class="text-sm text-gray-500">Various Gyms, Nashik & Pune | Apr 2011 - Nov 2022</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Footer -->
-    <footer class="bg-blue-600 text-white text-center py-4 mt-8">
-        <p>&copy; 2025 Rakesh Ashok Aamalepatil. All rights reserved.</p>
+    <!-- Skills & Tools Section -->
+    <section id="skills" class="py-16 md:py-24 px-4">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Skills & Technical Proficiencies</h2>
+            <p class="text-gray-600 max-w-3xl mx-auto mb-12">
+                A visual breakdown of my professional skills, blending deep expertise in client management with a growing proficiency in data analysis tools.
+            </p>
+            <div class="bg-white rounded-xl shadow-lg p-6 md:p-10">
+                <div class="flex flex-col space-y-4">
+                    <!-- Skills will be rendered dynamically or with static bars -->
+                    <!-- Hard Skills -->
+                    <div class="text-left">
+                        <span class="text-sm font-semibold text-gray-700">Python</span>
+                        <div class="bg-gray-200 rounded-full h-2.5 mt-1">
+                            <div class="bg-teal-500 h-2.5 rounded-full" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                    <div class="text-left">
+                        <span class="text-sm font-semibold text-gray-700">SQL</span>
+                        <div class="bg-gray-200 rounded-full h-2.5 mt-1">
+                            <div class="bg-teal-500 h-2.5 rounded-full" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="text-left">
+                        <span class="text-sm font-semibold text-gray-700">MS Excel</span>
+                        <div class="bg-gray-200 rounded-full h-2.5 mt-1">
+                            <div class="bg-teal-500 h-2.5 rounded-full" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    <!-- Soft Skills -->
+                    <div class="text-left">
+                        <span class="text-sm font-semibold text-gray-700">Communication</span>
+                        <div class="bg-gray-200 rounded-full h-2.5 mt-1">
+                            <div class="bg-blue-500 h-2.5 rounded-full" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="text-left">
+                        <span class="text-sm font-semibold text-gray-700">Team Leadership</span>
+                        <div class="bg-gray-200 rounded-full h-2.5 mt-1">
+                            <div class="bg-blue-500 h-2.5 rounded-full" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="text-left">
+                        <span class="text-sm font-semibold text-gray-700">Problem Solving</span>
+                        <div class="bg-gray-200 rounded-full h-2.5 mt-1">
+                            <div class="bg-blue-500 h-2.5 rounded-full" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 md:py-24 px-4 bg-gray-50">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Projects</h2>
+            <p class="text-gray-600 max-w-3xl mx-auto mb-12">
+                Here are a few of my data analysis projects, demonstrating my skills in real-world applications. Click on the links to view the live project pages.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project Card 1 -->
+                <a href="https://rakeshaamalepatil.github.io/Blinkit-Analysis-Project/" class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-200 block text-left" target="_blank">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2">Blinkit Analysis Project</h3>
+                    <p class="text-gray-500 text-sm">
+                        A detailed analysis of Blinkit's data to uncover key insights and trends, using Python and data visualization tools.
+                    </p>
+                </a>
+                <!-- Project Card 2 -->
+                <a href="https://rakeshaamalepatil.github.io/Insurance_Data_Analysis_Project/" class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-200 block text-left" target="_blank">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2">Insurance Data Analysis Project</h3>
+                    <p class="text-gray-500 text-sm">
+                        Analyzing insurance datasets to identify patterns and inform business decisions, showcasing skills in data cleaning and SQL.
+                    </p>
+                </a>
+                <!-- Project Card 3 -->
+                <a href="https://rakeshaamalepatil.github.io/sales-dashboard/" class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-200 block text-left" target="_blank">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2">Sales Dashboard Project</h3>
+                    <p class="text-gray-500 text-sm">
+                        An interactive dashboard to track and visualize sales performance metrics, demonstrating proficiency in Excel and data storytelling.
+                    </p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer Section -->
+    <footer class="bg-gray-900 text-white py-16 px-4 text-center">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-4">Ready to Connect</h2>
+            <p class="text-lg text-gray-400 mb-6">
+                I am eager to bring my unique blend of skills to the next great opportunity.
+            </p>
+            <div class="space-y-2 text-sm md:text-base">
+                <p>Email: <a href="mailto:rakesh.aamale.paatil@gmail.com" class="text-blue-400 hover:underline">rakesh.aamale.paatil@gmail.com</a></p>
+                <p>Phone: +91 81495 11093</p>
+            </div>
+            <p class="mt-8 text-xs text-gray-500">&copy; 2025 Rakesh A. Aamalepatil. All Rights Reserved.</p>
+        </div>
     </footer>
 
 </body>
